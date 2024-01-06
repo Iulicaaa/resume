@@ -1,12 +1,13 @@
 import './normalize.css';
 import Layout from './components/Layout';
+import Details from './components/Details';
 
 export default function App() {
   return (
     <Layout
       left = { 
         <div>
-          Left side
+          <Details />
         </div>
       }     
        right = {
