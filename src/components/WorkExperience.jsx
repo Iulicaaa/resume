@@ -20,7 +20,9 @@ const WorkExperience = () => {
                'Principle', 
                'Presentations',
                'User Jorneys'
-             ]}/>
+             ]}
+            boxShadow="15px 15px 0px 0px #3DC39B"
+            />
           <ExperienceCard 
             title = "Senior UI/UX Designer"
             start="Nov 2019"
@@ -37,7 +39,8 @@ const WorkExperience = () => {
                'Principle', 
                'Presentations',
                'Web / Mobile'
-             ]}/>
+             ]}
+            boxShadow= "15px 15px 0px 0px #928CF8"/>
           <ExperienceCard 
             title = "UI /UX Designer - Front-end"
             start="Nov 2017"
@@ -52,7 +55,8 @@ const WorkExperience = () => {
                'Principle', 
                'Front-end Dev',
                'Web / Mobile'
-             ]}/>
+             ]}
+            boxShadow= "15px 15px 0px 0px #FE74A6"/>
          <ExperienceCard 
            title="Freelance Designer"
            start="June 2016"
@@ -65,7 +69,8 @@ const WorkExperience = () => {
              'Reasearching',
              'Prototyping',
              'Web / Mobile'
-           ]}/>
+           ]}
+           boxShadow= "15px 15px 0px 0px #5B6DFF"/>
        </ExperienceList>
     </div>
   )

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ExperienceCard = (props) => {
   return(
-    <Container>
+    <Container boxShadow={props.boxShadow}>
       <SpacedColumn>
         <Title>{props.title}</Title>
         <Period>{props.start}-{props.end}</Period>
@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-shrink: 0;
   border: 3px solid #211814;
   background: #FFF;
-  box-shadow: 15px 15px 0px 0px #3DC39B;
+  box-shadow: ${(props) => props.boxShadow};
 `;
 
 const SpacedColumn = styled.div`
