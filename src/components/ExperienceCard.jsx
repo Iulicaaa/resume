@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import React from "react";
 
 const ExperienceCard = (props) => {
-  return(
+  return (
     <Container boxShadow={props.boxShadow}>
       <SpacedColumn>
         <Title>{props.title}</Title>
-        <Period>{props.start}-{props.end}</Period>
+        <Period>
+          {props.start}-{props.end}
+        </Period>
       </SpacedColumn>
       <SpacedColumn>
         <Company>
@@ -15,13 +18,13 @@ const ExperienceCard = (props) => {
         <Location>{props.location}</Location>
       </SpacedColumn>
       <BuletPoints>
-        {props.buletPoints?.map(point => (
-       <Point>{point}</Point>
-      ))}
+        {props.buletPoints?.map((point, i) => (
+          <Point key={i}>{point}</Point>
+        ))}
       </BuletPoints>
     </Container>
-  )
-}
+  );
+};
 
 export default ExperienceCard;
 
@@ -34,7 +37,7 @@ const Container = styled.div`
   gap: 8px;
   flex-shrink: 0;
   border: 3px solid #211814;
-  background: #FFF;
+  background: #fff;
   box-shadow: ${(props) => props.boxShadow};
 `;
 
@@ -44,7 +47,6 @@ const SpacedColumn = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
 
 const Title = styled.span`
   color: #000;
@@ -58,7 +60,7 @@ const Title = styled.span`
 const Period = styled.span`
   color: #595959;
   text-align: right;
-  font-family: 'Source Sans 3';
+  font-family: "Source Sans 3";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -100,10 +102,9 @@ const BuletPoints = styled.ul`
   columns: 2;
 `;
 
-
 const Point = styled.li`
   color: #595959;
-  font-family: 'Source Sans 3';
+  font-family: "Source Sans 3";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
