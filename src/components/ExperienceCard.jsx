@@ -1,28 +1,24 @@
 import styled from 'styled-components';
 
-const ExperienceCard = () => {
+const ExperienceCard = (props) => {
   return(
     <Container>
       <SpacedColumn>
-        <Title>Lead UI/UX Designer</Title>
-        <Period>Aug 2021 - Current...</Period>
+        <Title>{props.title}</Title>
+        <Period>{props.start}-{props.end}</Period>
       </SpacedColumn>
       <SpacedColumn>
         <Company>
-          <CompanyLogo src="https://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="company logo" />
-          <CompanyName>BMW</CompanyName>
+          <CompanyLogo src={props.companyLogo} />
+          <CompanyName>{props.companyName}</CompanyName>
         </Company>
-        <Location>Dubai, UAE</Location>
+        <Location>{props.location}</Location>
       </SpacedColumn>
       <BuletPoints>
-        <Point>Visual Design</Point>
-        <Point>Prototyping</Point>
-        <Point>UX Researching</Point>
-        <Point>Principle</Point>
-        <Point>Presentations</Point>
-        <Point>Use Jorneys</Point>
+        {props.buletPoints?.map(point => (
+       <Point>{point}</Point>
+      ))}
       </BuletPoints>
-      
     </Container>
   )
 }
