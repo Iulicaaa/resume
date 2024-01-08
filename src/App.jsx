@@ -5,6 +5,8 @@ import WorkExperience from "./components/WorkExperience";
 import Hobby from "./components/Hobby";
 import Image from "./components/Image";
 import Education from "./components/Education";
+import React from "react";
+import Skills from "./components/Skills";
 
 export default function App() {
   return (
@@ -20,6 +22,7 @@ export default function App() {
         <div>
           <Image src="https://th.bing.com/th/id/R.2b3c1572af8c8f459c595d013e6db2ec?rik=vLC%2bW92qOW%2fefw&riu=http%3a%2f%2fphoto.aseed.fr%2fwp-content%2fuploads%2f2015%2f10%2fphotographe-CV-LinkedIn-Nice-1.jpg&ehk=di5HMaW51kDGoerwtkenIXoJGbf5GyagBSCIX5BVNMU%3d&risl=&pid=ImgRaw&r=0" />
           <Education />
+          <Skills />
         </div>
       }
     />

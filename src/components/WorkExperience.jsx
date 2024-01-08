@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ExperienceCard from "./ExperienceCard";
+import React from "react";
 
 const WorkExperience = () => {
   return (
