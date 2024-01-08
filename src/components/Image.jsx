@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 const Image = ({ src }) => {
   return (
@@ -42,8 +43,8 @@ const AvailableSign = styled.div`
   background-color: transparent;
   color: white;
   position: absolute;
-  bottom: 10px;
-  right: 100px;
+  bottom: 6px;
+  right: 130px;
 `;
 
 const Icon = styled.img`
