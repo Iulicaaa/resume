@@ -1,54 +1,57 @@
 import styled from "styled-components";
 import React from "react";
+import MyImage from "./MyImage.png";
 
-const Image = ({ src }) => {
+const ImageComponent = ({ src }) => {
   return (
-    <Layout>
-      <Container src={src} />
+    <Container>
+      <Image src={MyImage} alt="Profile" />
       <AvailableSign>
         <Icon
           src="https://cdn2.iconfinder.com/data/icons/player-app-icons/512/2_on-512.png"
           alt="Available Icon"
         />
       </AvailableSign>
-    </Layout>
+    </Container>
   );
 };
 
-export default Image;
+export default ImageComponent;
 
-const Layout = styled.div`
+const Container = styled.div`
   position: relative;
+  width: 213px;
+  height: 231px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-shrink: 0;
+  margin-top: -30px;
+  margin-left: 50px;
 `;
 
-const Container = styled.img`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 190px;
-  height: 266px;
-  flex-shrink: 0;
-  box-shadow: 15px 15px 0px 0px #928cf8;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border: 3px solid #211814;
-  margin-top: -26px;
+  box-shadow: 15px 15px 0px 0px #fe74a6;
 `;
 
 const AvailableSign = styled.div`
-  display: flex;
-  align-items: right;
-  flex-direction: column;
-  background-color: transparent;
-  color: white;
   position: absolute;
-  bottom: 6px;
-  right: 130px;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
 `;
 
 const Icon = styled.img`
   width: 40px;
   height: 40px;
-  margin-right: 1px;
+  margin-right: 8px;
 `;
